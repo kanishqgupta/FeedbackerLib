@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+bintray {
+    user = 'masterkanu'
+    key = '94865fd59a07ae6ced9a2d3faa79c379c21fca98'
+    pkg {
+        repo = 'maven'
+        name = 'com.kanishq.feedbacker'
+
+        version {
+            name = '1.0.0'
+            desc = 'Feedbacker providea new way of feedback'
+            released  = new Date()
+            vcsTag = '1.0.1'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/Masterkanu/feedbacker.git'
+        websiteUrl = 'https://github.com/Masterkanu/feedbacker'
+    }
+    configurations = ['archives']
+}
