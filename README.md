@@ -64,9 +64,7 @@ Don't Forget to add activity in Your Manifest
 
     <activity android:name="com.kanishq.feedbacker.feedbackerActivity" />
     
-License-
--------------
-(/LICENSE.md)
+
 
 
 
