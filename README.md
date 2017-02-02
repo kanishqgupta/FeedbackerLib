@@ -50,7 +50,8 @@ For Direct Use (This will directly open Mail app and add device information)
 
       feedbacker fd = new feedbacker();
                 fd.deviceInf(Context);
-.
+                
+
 For Adding Email Address
 
      feedbacker.e= "your_email@abc.com"; //Replace with your Email
