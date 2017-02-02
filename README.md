@@ -49,7 +49,7 @@ Using-
 For Direct Use (This will directly open Mail app and add device information)
 
       feedbacker fd = new feedbacker();
-                fd.deviceInf(Context);
+      fd.deviceInf(Context);
                 
 
 For Adding Email Address
